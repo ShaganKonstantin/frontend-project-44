@@ -32,8 +32,11 @@ while (correctAnswerCount < 3 && attemptsCount < 3) {
     console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
     console.log(`Let's try again, ${name}`);
     attemptsCount += 1;
+  } else if (reply !== 'yes' && reply !== 'no') {
+    console.log(`${reply} is wrong answer, try again`);
+    attemptsCount += 1;
   }
-}
+};
 
 if (correctAnswerCount === 3) {
   console.log(`Congratulations, ${name}`);
