@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../getRandomNumber.js'
+import getRandomNumber from '../getRandomNumber.js';
 
 const brainCalc = () => {
   console.log('Welcome to the Brain Games!');
@@ -16,27 +16,26 @@ const brainCalc = () => {
   while (correctAnswerCount < 3 && attemptsCount < 3) {
     const randomOperatorArray = ['*', '+', '-'];
     const randomOperator = randomOperatorArray[getRandomNumber(3)];
-    
+
     const randomNumber1 = getRandomNumber(100);
     const randomNumber2 = getRandomNumber(100);
-    
 
     console.log(`Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`);
     const reply = readlineSync.questionInt('Your answer: ');
     let result = 0;
-        switch (randomOperator) {
-         case '+':
-           result = randomNumber1 + randomNumber2;
-           break;
-         case '-':
-           result = randomNumber1 - randomNumber2;
-           break;
-          case '*':
-            result = randomNumber1 * randomNumber2;
-            break;
-          default:
-            result == null;
-        }
+    switch (randomOperator) {
+      case '+':
+        result = randomNumber1 + randomNumber2;
+        break;
+      case '-':
+        result = randomNumber1 - randomNumber2;
+        break;
+      case '*':
+        result = randomNumber1 * randomNumber2;
+        break;
+      default:
+        result == null;
+    }
 
     if (reply === result) {
       console.log('Correct!');
