@@ -1,4 +1,6 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import getRandomNumber from '../getRandomNumber.js'
 
 const brainEven = () => {
   console.log('Welcome to the Brain Games!');
@@ -9,13 +11,13 @@ const brainEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   const playBrainEven = () => {
-    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
     const attemptsCount = 0;
     let correctAnswerCount = 0;
+    
 
     while (correctAnswerCount < 3 && attemptsCount < 3) {
-      const randomNumber = getRandomNumber(0, 50);
+      const randomNumber = getRandomNumber(50);
       console.log(`Question: ${randomNumber}`);
 
       const reply = readlineSync.question('Your answer: ');
