@@ -8,11 +8,11 @@ brain-games:
 
 brain-even:
 
-	node bin/brain-even.js
+	node bin/brainEvenLaunch.js
 
 brain-calc:
 
-	node bin/brain-calc.js
+	node bin/brainCalcLaunch.js
 
 publish:
       

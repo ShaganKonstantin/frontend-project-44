@@ -1,48 +1,22 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+
+import engine from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
-const brainEven = () => {
-  console.log('Welcome to the Brain Games!');
+const brainEven_test = () => {
+  const descrForEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const playEven = () => {
+    const randomNumber = getRandomNumber(50);
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    const question = `${randomNumber}`;
 
-  const playBrainEven = () => {
-    const attemptsCount = 0;
-    let correctAnswerCount = 0;
+    const isEven = randomNumber % 2 === 0 ? 'yes' : 'no';
+    const correctAnswer = isEven;
 
-    while (correctAnswerCount < 3 && attemptsCount < 3) {
-      const randomNumber = getRandomNumber(50);
-      console.log(`Question: ${randomNumber}`);
-
-      const reply = readlineSync.question('Your answer: ');
-
-      if (randomNumber % 2 === 0 && reply === 'yes') {
-        console.log('Correct!');
-        correctAnswerCount += 1;
-      } else if (randomNumber % 2 === 0 && reply === 'no') {
-        console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${name}`);
-        correctAnswerCount = 0;
-      } else if (randomNumber % 2 !== 0 && reply === 'no') {
-        console.log('Correct!');
-        correctAnswerCount += 1;
-      } else if (randomNumber % 2 !== 0 && reply === 'yes') {
-        console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}`);
-        correctAnswerCount = 0;
-      } else if (reply !== 'yes' && reply !== 'no') {
-        console.log(`${reply} is wrong answer, try again`);
-        correctAnswerCount = 0;
-      }
-    }
-
-    if (correctAnswerCount === 3) {
-      console.log(`Congratulations, ${name}`);
-    }
+    return [question, correctAnswer];
   };
-  playBrainEven();
+  engine(descrForEven, playEven);
 };
 
-export default brainEven;
+export default brainEven_test;
