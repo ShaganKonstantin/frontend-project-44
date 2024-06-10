@@ -1,3 +1,3 @@
-import brainCalc_test from "../src/games/brainCalc_test.js"
+import brainCalc_test from '../src/games/brainCalc_test.js';
 
-brainCalc_test()
+brainCalc_test();

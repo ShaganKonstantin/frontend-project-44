@@ -1,22 +1,20 @@
-import engine from '../index.js';
+import engine from '../index_test.js';
 import getRandomNumber from '../getRandomNumber.js';
 
 const brainEven_test = () => {
-    const descrForEven = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const descrForEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    const playEven = () => {
-        const randomNumber = getRandomNumber(50);
+  const playEven = () => {
+    const randomNumber = getRandomNumber(50);
 
-        const question = `${randomNumber}`;
+    const question = `${randomNumber}`;
 
-        if (randomNumber % 2 === 0 && reply === 'yes' || randomNumber % 2 !== 0 && reply === 'no') {
-            result = correctAnswer; 
-        } else {
-            return;
-        }
-        return [question, result];
-    }
-engine(descrForEven, playEven);
+    const isEven = randomNumber % 2 === 0 ? 'yes' : 'no';
+    const correctAnswer = isEven;
+
+    return [question, correctAnswer];
+  };
+  engine(descrForEven, playEven);
 };
 
 export default brainEven_test;
