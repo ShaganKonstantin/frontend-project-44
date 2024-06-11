@@ -1,7 +1,7 @@
 import engine from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
-const brainCalc_test = () => {
+const brainCalc = () => {
   const descrForCalc = 'What is the result of the expression?';
 
   const playCalc = () => {
@@ -32,4 +32,4 @@ const brainCalc_test = () => {
   engine(descrForCalc, playCalc);
 };
 
-export default brainCalc_test;
+export default brainCalc;

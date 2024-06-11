@@ -3,7 +3,7 @@
 import engine from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
-const brainEven_test = () => {
+const brainEven = () => {
   const descrForEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const playEven = () => {
@@ -19,4 +19,4 @@ const brainEven_test = () => {
   engine(descrForEven, playEven);
 };
 
-export default brainEven_test;
+export default brainEven;
