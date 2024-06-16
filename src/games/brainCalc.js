@@ -6,7 +6,7 @@ const brainCalc = () => {
 
   const playCalc = () => {
     const randomOperatorArray = ['*', '+', '-'];
-    	const randomOperator = randomOperatorArray[getRandomNumber(3)];
+    const randomOperator = randomOperatorArray[getRandomNumber(3)];
 
    	const randomNumber1 = getRandomNumber(100);
    	const randomNumber2 = getRandomNumber(100);
