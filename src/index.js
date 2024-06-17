@@ -10,7 +10,7 @@ const engine = (description, game) => {
 
   for (let i = 0; i < 3; i += 1) {
     const questionAndAnswer = game();
-    console.log('Question: ', questionAndAnswer[0]);
+    console.log('Question: ', String(questionAndAnswer[0]));
     const reply = readlineSync.question('Your answer: ');
 
     const correctAnswer = questionAndAnswer[1];
