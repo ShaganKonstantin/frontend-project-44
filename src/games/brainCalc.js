@@ -8,8 +8,8 @@ const brainCalc = () => {
     const randomOperatorArray = ['*', '+', '-'];
     const randomOperator = randomOperatorArray[getRandomNumber(3)];
 
-   	const randomNumber1 = getRandomNumber(100);
-   	const randomNumber2 = getRandomNumber(100);
+    const randomNumber1 = getRandomNumber(100);
+    const randomNumber2 = getRandomNumber(100);
 
     const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
 
@@ -25,7 +25,7 @@ const brainCalc = () => {
         result = randomNumber1 * randomNumber2;
         break;
       default:
-        result == null;
+        result = null;
     }
     return [question, result.toString()];
   };

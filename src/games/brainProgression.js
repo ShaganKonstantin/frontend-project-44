@@ -20,8 +20,7 @@ const brainProgression = () => {
     const randomArrayItem = result[randomIndex];
 
     result.splice(randomIndex, 1, '..');
-    
-    
+
     const question = result.join(' ');
 
     const correctAnswer = randomArrayItem;
