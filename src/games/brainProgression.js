@@ -19,8 +19,10 @@ const brainProgression = () => {
     const randomIndex = getRandomNumber(result.length);
     const randomArrayItem = result[randomIndex];
 
-    result.splice(randomIndex, 1, '...');
-    const question = result;
+    result.splice(randomIndex, 1, '..');
+    
+    
+    const question = result.join(' ');
 
     const correctAnswer = randomArrayItem;
 
