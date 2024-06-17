@@ -7,7 +7,7 @@ const brainPrime = () => {
     const playPrime = () => {
         const number = getRandomNumberInc(2, 20); 
 
-        const question = `${number}`;
+        const question = number;
 
         const isPrime = () => {
             for (let i = 2; i < number; i += 1) {
