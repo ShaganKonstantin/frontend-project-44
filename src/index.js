@@ -8,7 +8,9 @@ const engine = (description, game) => {
 
   console.log(description);
 
-  for (let i = 0; i < 3; i += 1) {
+  const rounds = 3;
+
+  for (let i = 0; i < rounds; i += 1) {
     const questionAndAnswer = game();
     console.log('Question:', String(questionAndAnswer[0]));
     const reply = readlineSync.question('Your answer: ');

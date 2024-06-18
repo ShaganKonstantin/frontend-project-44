@@ -1,5 +1,6 @@
 import engine from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
+import isEven from '../isEven.js';
 
 const brainEven = () => {
   const descrForEven = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -9,8 +10,7 @@ const brainEven = () => {
 
     const question = randomNumber;
 
-    const isEven = randomNumber % 2 === 0 ? 'yes' : 'no';
-    const correctAnswer = isEven;
+    const correctAnswer = isEven(randomNumber);
 
     return [question, correctAnswer];
   };
