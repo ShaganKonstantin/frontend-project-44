@@ -18,7 +18,7 @@ const brainPrime = () => {
       return true;
     };
 
-    const correctAnswer = isPrime() ? 'no' : 'yes';
+    const correctAnswer = isPrime() ? 'yes' : 'no';
 
     return [question, correctAnswer];
   };
