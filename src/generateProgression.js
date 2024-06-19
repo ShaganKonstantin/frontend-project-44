@@ -1,4 +1,4 @@
-const getProgression = (start, length, step) => {
+const generateProgression = (start, length, step) => {
   const result = [];
 
   for (let i = 0; i < length; i += 1) {
@@ -7,4 +7,4 @@ const getProgression = (start, length, step) => {
   return result;
 };
 
-export default getProgression;
+export default generateProgression;

@@ -1,13 +1,13 @@
 import engine from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 import getRandomNumberInc from '../getRandomNumberInc.js';
-import getProgression from '../getProgression.js';
+import generateProgression from '../generateProgression.js';
 
 const brainProgression = () => {
   const descrForProgression = 'What number is missing in the progression?';
 
   const playProgression = () => {
-    const result = getProgression(
+    const result = generateProgression(
       getRandomNumber(100),
       getRandomNumberInc(5, 10),
       getRandomNumberInc(2, 4),

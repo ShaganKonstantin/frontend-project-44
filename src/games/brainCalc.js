@@ -1,5 +1,6 @@
 import engine from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
+import defineOperation from '../defineOperation.js';
 
 const brainCalc = () => {
   const descrForCalc = 'What is the result of the expression?';
@@ -13,24 +14,7 @@ const brainCalc = () => {
 
     const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
 
-    const defineOperation = () => {
-      let result = 0;
-      switch (randomOperator) {
-        case '+':
-          result = randomNumber1 + randomNumber2;
-          break;
-        case '-':
-          result = randomNumber1 - randomNumber2;
-          break;
-        case '*':
-          result = randomNumber1 * randomNumber2;
-          break;
-        default:
-          result = null;
-      }
-      return result;
-    };
-    return [question, defineOperation().toString()];
+    return [question, defineOperation(randomOperator, randomNumber1, randomNumber2).toString()];
   };
   engine(descrForCalc, playCalc);
 };

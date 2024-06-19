@@ -10,7 +10,7 @@ const brainEven = () => {
 
     const question = randomNumber;
 
-    const correctAnswer = isEven(randomNumber);
+    const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
 
     return [question, correctAnswer];
   };
